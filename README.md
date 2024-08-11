@@ -1,5 +1,5 @@
 
-```markdown
+
 # RCE Payloads for WAF Bypass
 
 This repository contains a Bash script with example payloads designed to demonstrate various techniques for bypassing Web Application Firewalls (WAFs) in the context of Remote Code Execution (RCE) vulnerabilities. The provided payloads are for educational and research purposes only.
