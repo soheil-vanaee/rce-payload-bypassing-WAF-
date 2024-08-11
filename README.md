@@ -1,4 +1,3 @@
-Sure! Here's a comprehensive and well-structured README for your GitHub repository that includes the Bash script for RCE payloads and provides context, usage instructions, and important notes.
 
 ```markdown
 # RCE Payloads for WAF Bypass
